@@ -1,1 +1,65 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background: green;
+}
+.card {
+  align-items: center;
+  background: white;
+  margin: auto;
+  width: 300px;
+  height: 450px;
+  border-radius: 5px;
+  border: 1px black;
+  padding: 10px;
+  padding-top: 125px;
+  position: relative;
+  font-size: 6.5em;
+}
+p::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 10px;
+}
+
+p::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+}
+
+.card.♥ p::before {
+  content: "♥";
+  color: red;
+}
+.card.♥ p::after {
+  content: "♥";
+  color: red;
+  transform: rotate(180deg);
+}
+.card.♠ p::before {
+  content: "♠";
+}
+.card.♠ p::after {
+  content: "♠";
+  transform: rotate(180deg);
+}
+
+.card.♦ p::before {
+  content: "♦";
+  color: red;
+}
+.card.♦ p::after {
+  content: "♦";
+  color: red;
+  transform: rotate(180deg);
+}
+.card.♣ p::before {
+  content: "♣";
+}
+.card.♣ p::after {
+  content: "♣";
+  transform: rotate(180deg);
+}
